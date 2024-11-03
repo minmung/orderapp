@@ -11,7 +11,7 @@ const EditProducts = () => {
 
 
   useEffect(() => {
-    axios.get('http://125.228.233.149/ordershop/src/php/getProduct.php')
+    axios.get('https://125.228.233.149/ordershop/src/php/getProduct.php')
       .then(response => {
         setProducts(response.data);
       })
@@ -19,7 +19,7 @@ const EditProducts = () => {
         console.error('There was an error fetching the products!', error);
       });
       // Fetch categories from backend
-    axios.get("http://125.228.233.149/ordershop/src/php/getCategory.php")
+    axios.get("https://125.228.233.149/ordershop/src/php/getCategory.php")
     .then(response => {
       setCategories(response.data);
     })
