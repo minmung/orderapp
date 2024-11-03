@@ -1,5 +1,6 @@
 {
   "name": "ordershop",
+  "homepage": "https://minmung.github.io/orderapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
