@@ -10,7 +10,7 @@ const AddProduct = () => {
   useEffect(() => {
     // Fetch categories from backend
     axios
-      .get('http://125.228.233.149/ordershop/src/php/getCategory.php') // You should create this PHP script to fetch categories
+      .get('https://125.228.233.149/ordershop/src/php/getCategory.php') // You should create this PHP script to fetch categories
       .then(response => {
         setCategories(response.data);
         setSelectedCategory(response.data[0]); // Set the first category as default
@@ -30,7 +30,7 @@ const AddProduct = () => {
     };
 
     axios
-      .post('http://125.228.233.149/ordershop/src/php/addproduct.php', newProduct)
+      .post('https://125.228.233.149/ordershop/src/php/addproduct.php', newProduct)
       .then(response => {
         console.log(response.data);
         alert('Product added successfully');
