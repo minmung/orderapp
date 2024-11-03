@@ -24,7 +24,7 @@ const OrderSystem = () => {
   useEffect(() => {
     // Fetch categories from backend
     axios
-      .get('http://125.228.233.149/ordershop/src/php/getCategory.php')
+      .get('https://125.228.233.149/ordershop/src/php/getCategory.php')
       .then(response => {
         const fetchedCategories = response.data;
         const uniqueCategories = ["All", ...fetchedCategories];
@@ -39,7 +39,7 @@ const OrderSystem = () => {
   useEffect(() => {
     // Fetch products from backend
     axios
-      .get('http://125.228.233.149/ordershop/src/php/getProduct.php')
+      .get('https://125.228.233.149/ordershop/src/php/getProduct.php')
       .then(response => {
         const productsData = response.data;
         setProducts(productsData);
@@ -118,7 +118,7 @@ const OrderSystem = () => {
     setLoading(true);
   
     axios
-      .post("http://125.228.233.149/ordershop/src/php/reactData.php", {
+      .post("https://125.228.233.149/ordershop/src/php/reactData.php", {
         total: discountedTotal,
         cart: cart,
       })
