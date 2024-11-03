@@ -12,7 +12,7 @@ const SaleList = () => {
 
   const fetchSalesData = async (period) => {
     try {
-      const response = await axios.get(`http://125.228.233.149/ordershop/src/php/getSalesData.php?period=${period}`);
+      const response = await axios.get(`https://125.228.233.149/ordershop/src/php/getSalesData.php?period=${period}`);
       console.log(response.data); // 打印響應數據
       setSalesData(response.data);
       setError(null); // 清除錯誤狀態
@@ -23,7 +23,7 @@ const SaleList = () => {
   };
 
   const handleDownloadExcel = () => {
-    window.location.href = `http://125.228.233.149/ordershop/src/php/exportToExcel.php?period=${period}`;
+    window.location.href = `https://125.228.233.149/ordershop/src/php/exportToExcel.php?period=${period}`;
     alert('已下載報表，業績逐漸提升 !!!! 請繼續努力~')
   };
 
